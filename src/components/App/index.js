@@ -1,12 +1,19 @@
 // == Import
 import githubLogo from 'src/assets/images/logo-github.png';
-import './styles.css';
+import './styles.scss';
+
+import SearchBar from '../SearchBar';
+import Message from '../Message';
+import ReposResults from '../ReposResults';
 
 // == Composant
 function App() {
   return (
-    <div className="app">
-      <img src={githubLogo} alt="github logo" />
+    <div className="App">
+      <img className="App__logo" src={githubLogo} alt="github logo" />
+      <SearchBar />
+      <Message />
+      <ReposResults />
     </div>
   );
 }

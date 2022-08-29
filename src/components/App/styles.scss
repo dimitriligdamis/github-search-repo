@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.App {
+  background-color: vars.$bg-app;
+  margin: 0 auto;
+  max-width: 70rem;
+  min-height: 100vh;
+  padding: 1rem;
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+}
