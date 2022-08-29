@@ -6,6 +6,8 @@ import SearchBar from '../SearchBar';
 import Message from '../Message';
 import ReposResults from '../ReposResults';
 
+import repos from '../../data/repos';
+
 // == Composant
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
       <img className="App__logo" src={githubLogo} alt="github logo" />
       <SearchBar />
       <Message />
-      <ReposResults />
+      <ReposResults repositories={repos.items} />
     </div>
   );
 }
