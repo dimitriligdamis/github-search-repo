@@ -3,9 +3,12 @@ import githubLogo from 'src/assets/images/logo-github.png';
 import './styles.scss';
 
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import SearchBar from '../SearchBar';
 import Message from '../Message';
 import ReposResults from '../ReposResults';
+import Navbar from '../NavBar';
+import Faq from '../Faq';
 
 const axios = require('axios');
 
@@ -34,9 +37,25 @@ function App() {
   return (
     <div className="App">
       <img className="App__logo" src={githubLogo} alt="github logo" />
-      <SearchBar inputValue={inputValue} setInputValue={setInputValue} setSearch={setSearch} />
-      <Message count={result} />
-      <ReposResults repositories={repos} />
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={(
+            <>
+              <SearchBar
+                inputValue={inputValue}
+                setInputValue={setInputValue}
+                setSearch={setSearch}
+              />
+              <Message count={result} />
+              <ReposResults repositories={repos} />
+            </>
+      )}
+        />
+        <Route path="/faq" element={<Faq />} />
+      </Routes>
+
     </div>
   );
 }
