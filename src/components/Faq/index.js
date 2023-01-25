@@ -1,8 +1,8 @@
-import { Segment } from "semantic-ui-react";
+import "./styles.scss";
 
 export default function Faq() {
   return (
-    <Segment className="Faq">
+    <div className="Faq">
       <h1 className="Faq__title">FAQ</h1>
       <h2 className="Faq__h2">A quoi ça sert ?</h2>
       <p className="Faq__paragraph">
@@ -16,6 +16,6 @@ export default function Faq() {
       </p>
       <h2 className="Faq__h2">Puis-je chercher n'importe quel terme ?</h2>
       <p className="Faq__paragraph">Oui, c'est fou.</p>
-    </Segment>
+    </div>
   );
 }
