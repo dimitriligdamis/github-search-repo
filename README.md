@@ -12,6 +12,3 @@ https://api.github.com/search/repositories
 
 ![preview main page github search repos app](./docs/resultat.png)
 
-## Preview FAQ Page
-
-![preview FAQ page github search repos app](./docs/resultat-bonus.png)
